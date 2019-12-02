@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernBrowser", "ModernBrowser\ModernBrowser.csproj", "{CDDA698F-D399-4E24-AFE8-BFB29BADDB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChromiumPlugin", "ChromiumPlugin\ChromiumPlugin.csproj", "{D15B75F0-83DE-4294-8800-1CD54E2DE2B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDDA698F-D399-4E24-AFE8-BFB29BADDB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDA698F-D399-4E24-AFE8-BFB29BADDB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDA698F-D399-4E24-AFE8-BFB29BADDB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDA698F-D399-4E24-AFE8-BFB29BADDB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15B75F0-83DE-4294-8800-1CD54E2DE2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15B75F0-83DE-4294-8800-1CD54E2DE2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15B75F0-83DE-4294-8800-1CD54E2DE2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15B75F0-83DE-4294-8800-1CD54E2DE2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49CE824C-D0F9-42E0-93CD-12B4AAF8C0B9}
+	EndGlobalSection
+EndGlobal

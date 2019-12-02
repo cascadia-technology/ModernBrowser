@@ -1,0 +1,4 @@
+﻿<plugin>
+  <file name="ModernBrowser.dll"/>
+  <load env="SmartClient"/>
+</plugin>

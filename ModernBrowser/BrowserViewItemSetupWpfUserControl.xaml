@@ -1,0 +1,35 @@
+﻿<client:ViewItemWpfUserControl x:Class="ModernBrowser.BrowserViewItemSetupWpfUserControl"
+                               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                               xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                               xmlns:client="clr-namespace:VideoOS.Platform.Client;assembly=VideoOS.Platform"
+                               xmlns:local="clr-namespace:ModernBrowser"
+                               mc:Ignorable="d" 
+                               d:DesignHeight="450" d:DesignWidth="800"
+                               MouseDown="BrowserViewItem_MouseDown"
+                               MouseDoubleClick="BrowserViewItem_MouseDoubleClick">
+    <UserControl.DataContext>
+        <local:BrowserSettings />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1">Address</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1">Show address bar</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Address}"/>
+        <CheckBox Grid.Row="2" Grid.Column="2" IsChecked="{Binding ShowAddressBar}" IsEnabled="False"/>
+    </Grid>
+</client:ViewItemWpfUserControl>
