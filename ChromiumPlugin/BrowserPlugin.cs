@@ -3,7 +3,6 @@ using CefSharp.Wpf;
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
-using VideoOS.Platform.Client;
 
 namespace ChromiumPlugin
 {
