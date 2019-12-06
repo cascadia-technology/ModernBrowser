@@ -12,15 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ChromiumPlugin;
 
 namespace ModernBrowser
 {
     public partial class BrowserViewItemSetupWpfUserControl
     {
-        public BrowserViewItemSetupWpfUserControl(BrowserSettings settings)
+        private BrowserHost _browser;
+
+        public BrowserViewItemSetupWpfUserControl(BrowserSettings settings, BrowserHost browser = null)
         {
             InitializeComponent();
             DataContext = settings;
+            _browser = browser;
         }
 
         private void BrowserViewItem_MouseDown(object sender, MouseButtonEventArgs e)

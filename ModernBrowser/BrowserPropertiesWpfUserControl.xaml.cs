@@ -2,10 +2,10 @@
 {
     public partial class BrowserPropertiesWpfUserControl
     {
-        public BrowserPropertiesWpfUserControl(BrowserSettings settings)
+        public BrowserPropertiesWpfUserControl(BrowserViewItemManager vim)
         {
             InitializeComponent();
-            DataContext = settings;
+            DataContext = vim.Settings;
         }
     }
 }

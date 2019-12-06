@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using CefSharp;
 using CefSharp.Wpf;
 
 namespace ChromiumPlugin
@@ -9,6 +12,7 @@ namespace ChromiumPlugin
     public class BrowserHost : UserControl, IDisposable
     {
         private ChromiumWebBrowser _browser;
+        private string _home;
 
         public BrowserHost()
         {
@@ -16,6 +20,7 @@ namespace ChromiumPlugin
         }
         public BrowserHost(string initialAddress)
         {
+            _home = initialAddress;
             Init(initialAddress);
         }
 
@@ -39,6 +44,39 @@ namespace ChromiumPlugin
         public void Dispose()
         {
             _browser?.Dispose();
+        }
+
+        public void GoTo(string address)
+        {
+            _browser.Address = address;
+        }
+
+        public void GoBack()
+        {
+            var webBrowser = _browser.GetBrowser();
+            if (webBrowser.CanGoBack)
+            {
+                webBrowser.GoBack();
+            }
+        }
+
+        public void GoForward()
+        {
+            var webBrowser = _browser.GetBrowser();
+            if (webBrowser.CanGoForward)
+            {
+                webBrowser.GoForward();
+            }
+        }
+
+        public void GoHome()
+        {
+            _browser.Address = _home;
+        }
+
+        public void Refresh()
+        {
+            _browser.GetBrowser().Reload();
         }
     }
 }

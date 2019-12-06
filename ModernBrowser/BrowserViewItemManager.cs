@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using ChromiumPlugin;
 using VideoOS.Platform.Client;
 
 namespace ModernBrowser
@@ -13,19 +14,22 @@ namespace ModernBrowser
             Settings.PropertyChanged += SettingsOnPropertyChanged;
         }
 
-        private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        public override void PropertiesLoaded()
         {
-            SaveProperties();
         }
 
         public override PropertiesWpfUserControl GeneratePropertiesWpfUserControl()
         {
-            return new BrowserPropertiesWpfUserControl(Settings);
+            return new BrowserPropertiesWpfUserControl(this);
         }
 
         public override ViewItemWpfUserControl GenerateViewItemWpfUserControl()
         {
-            return new BrowserViewItemWpfUserControl(Settings);
+            return new BrowserViewItemWpfUserControl(this);
+        }
+        private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            SaveProperties();
         }
     }
 }

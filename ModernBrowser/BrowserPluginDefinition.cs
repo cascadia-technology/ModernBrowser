@@ -32,12 +32,12 @@ namespace ModernBrowser
         public override void Init()
         {
             _pluginPath = new FileInfo(GetType().Assembly.Location).DirectoryName;
-            AppDomain.CurrentDomain.AssemblyResolve += CefSharpResolver;
-            AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CefSharpResolver;
+            AppDomain.CurrentDomain.AssemblyResolve += ResolveCefSharpAssemblies;
+            AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += ResolveCefSharpAssemblies;
 
             ViewItemPlugins.Add(new BrowserViewItemPlugin());
         }
-        private Assembly CefSharpResolver(object sender, ResolveEventArgs args)
+        private Assembly ResolveCefSharpAssemblies(object sender, ResolveEventArgs args)
         {
             if (!args.Name.StartsWith("CefSharp")) return null;
 

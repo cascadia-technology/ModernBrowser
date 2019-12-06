@@ -10,10 +10,24 @@
              MouseDown="BrowserViewItem_MouseDown"
              MouseDoubleClick="BrowserViewItem_MouseDoubleClick"
              >
-    <UserControl.DataContext>
-        <local:BrowserSettings />
-    </UserControl.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="AddressBar">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Button Click="Back_OnClick">Back</Button>
+                <Button Click="Forward_OnClick">Forward</Button>
+                <Button Click="Refresh_OnClick">Refresh</Button>
+                <Button Click="Home_OnClick">Home</Button>
+            </StackPanel>
+            <TextBox Grid.Column="1" Text="{Binding Address}" KeyUp="AddressBar_OnKeyUp" />
+        </Grid>
+        <Grid Grid.Row="1" Name="Panel" />
     </Grid>
 </client:ViewItemWpfUserControl>

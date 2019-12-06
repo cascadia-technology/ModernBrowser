@@ -14,8 +14,8 @@
         <StackPanel>
             <TextBlock>Address</TextBlock>
             <TextBox Text="{Binding Address}"/>
-            <TextBlock>Show address bar</TextBlock>
-            <CheckBox IsChecked="{Binding ShowAddressBar}"/>
+            <!--<TextBlock>Show address bar</TextBlock>
+            <CheckBox IsChecked="{Binding ShowAddressBar}"/>-->
         </StackPanel>
     </Grid>
 </client:PropertiesWpfUserControl>

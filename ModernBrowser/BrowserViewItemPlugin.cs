@@ -29,7 +29,10 @@ namespace ModernBrowser
 
         public override void Init()
         {
-            BrowserPlugin.Initialize();            
+            var cachePath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
+                Name);
+            BrowserPlugin.Initialize(cachePath);            
         }
 
         public override void Close()
