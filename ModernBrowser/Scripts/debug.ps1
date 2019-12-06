@@ -49,13 +49,19 @@ try {
 	}
 
 	$projectName = (Get-Item $PSScriptRoot\..\).BaseName
+
 	$pluginPath = Join-Path "C:\Program Files\Milestone\MIPPlugins" $projectName
 	if (Test-Path $pluginPath) {
 		Remove-Item $pluginPath -Recurse -Force
 	}
-
 	New-Item $pluginPath -ItemType Directory
+	Get-ChildItem $OutputPath | Copy-Item -Destination $pluginPath -Recurse -Container
 
+	$pluginPath = Join-Path "C:\Program Files (x86)\Milestone\MIPPlugins" $projectName
+	if (Test-Path $pluginPath) {
+		Remove-Item $pluginPath -Recurse -Force
+	}
+	New-Item $pluginPath -ItemType Directory
 	Get-ChildItem $OutputPath | Copy-Item -Destination $pluginPath -Recurse -Container
 }
 catch {
