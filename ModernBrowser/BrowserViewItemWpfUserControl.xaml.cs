@@ -1,16 +1,16 @@
-﻿using System;
+﻿using ModernBrowser.Annotations;
+using ModernBrowser.SmartClientScripting;
+using ModernBrowserShim;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using CascadiaControls;
-using ChromiumPlugin;
-using ModernBrowser.Annotations;
 using VideoOS.Platform;
+using VideoOS.Platform.Client;
 using VideoOS.Platform.Messaging;
 
 namespace ModernBrowser
@@ -23,39 +23,27 @@ namespace ModernBrowser
         public override bool Selectable => true;
         public override bool ShowToolbar => false;
 
-        private string _address;
-        public string Address
+        public BrowserViewItemWpfUserControl()
         {
-            get => _address;
-            set
-            {
-                if (value.Equals(_address)) return;
-                _address = value;
-                _browser?.GoTo(value);
-                OnPropertyChanged();
-            }
+            
         }
-
         public BrowserViewItemWpfUserControl(BrowserViewItemManager vim)
         {
             _vim = vim;
-            _address = _vim.Settings.Address;
             InitializeComponent();
-            AddressBar.Visibility = _vim.Settings.ShowAddressBar ? Visibility.Visible : Visibility.Collapsed;
-            DataContext = this;
+            NavigationBar.Visibility = _vim.Settings.ShowNavigationBar ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public override void Init()
         {
             try
             {
-                _filters.Add(EnvironmentManager.Instance.RegisterReceiver
-                    (
-                        ModeChanged,
-                        new MessageIdFilter(MessageId.SmartClient.WorkSpaceStateChangedIndication)
-                    ));
+                _filters.Add(EnvironmentManager.Instance.RegisterReceiver(ThemeChangedHandler, new MessageIdFilter(MessageId.SmartClient.ThemeChangedIndication)));
+                ApplyTheme(ClientControl.Instance.Theme);
                 _vim.Settings.PropertyChanged += SettingsOnPropertyChanged;
-                _browser = new BrowserHost(_vim.Settings.Address);
+                _browser = new BrowserHost(_vim.Settings.Address, _vim.Settings.DpiScaleFactor / 100);
+                DataContext = _browser;
+                UpdateBrowserSettings();
                 Panel.Children.Add(_browser);
             }
             catch (Exception ex)
@@ -64,41 +52,53 @@ namespace ModernBrowser
             }
         }
 
-        private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        private object ThemeChangedHandler(Message message, FQID destination, FQID sender)
         {
-            if (e.PropertyName.Equals(nameof(_vim.Settings.Address)))
-            {
-                Address = _vim.Settings.Address;
-                _browser.GoTo(_vim.Settings.Address);
-            }
-
-            AddressBar.Visibility = _vim.Settings.ShowAddressBar ? Visibility.Visible : Visibility.Collapsed;
+            ApplyTheme(ClientControl.Instance.Theme);
+            return null;
         }
 
-        private object ModeChanged(Message message, FQID destination, FQID sender)
+        private void ApplyTheme(Theme theme)
         {
-            return null;
-            if (!(message.Data is WorkSpaceState state)) return null;
-            switch (state)
+            NavBack.Foreground = GetBrush(theme.TextColor);
+            NavForward.Foreground = GetBrush(theme.TextColor);
+            NavRefresh.Foreground = GetBrush(theme.TextColor);
+            NavHome.Foreground = GetBrush(theme.TextColor);
+            NavPrint.Foreground = GetBrush(theme.TextColor);
+        }
+        private static Brush GetBrush(System.Drawing.Color color)
+        {
+            return new SolidColorBrush(Color.FromArgb(color.A, color.R, color.G, color.B));
+        }
+
+        private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            try
             {
-                case WorkSpaceState.Normal:
-                    Content = _browser;
-                    break;
-                case WorkSpaceState.Setup:
-                    var grid = new Grid();
-                    grid.Children.Add(new TextBlock
-                    {
-                        Text = "Setup Mode", 
-                        HorizontalAlignment = HorizontalAlignment.Center, 
-                        VerticalAlignment = VerticalAlignment.Center,
-                        Background = Brushes.Transparent
-                    });
-                    Content = new BrowserViewItemSetupWpfUserControl(DataContext as BrowserSettings);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                UpdateBrowserSettings();
             }
-            return null;
+            catch (Exception ex)
+            {
+                EnvironmentManager.Instance.ExceptionHandler(GetType().Name, nameof(UpdateBrowserSettings), ex);
+            }
+        }
+
+        private void UpdateBrowserSettings()
+        {
+            if (_vim.Settings.EnableSmartClientScripting)
+            {
+                _browser.RegisterJsObject("SCSApplication", new SCSApplicationMethods());
+                _browser.RegisterJsObject("SCSGeneral", new SCSGeneralMethods());
+            }
+            else
+            {
+                _browser.UnregisterJsObject("SCSApplication");
+                _browser.UnregisterJsObject("SCSGeneral");
+            }
+            _browser.SetHome(_vim.Settings.Address);
+            _browser.GoHome();
+            NavigationBar.Visibility = _vim.Settings.ShowNavigationBar ? Visibility.Visible : Visibility.Collapsed;
+            _browser.DpiScaleFactor = _vim.Settings.DpiScaleFactor / 100;
         }
 
         private void BrowserViewItem_MouseDown(object sender, MouseButtonEventArgs e)
@@ -119,6 +119,7 @@ namespace ModernBrowser
 
         public override void Close()
         {
+            _vim.Settings.PropertyChanged -= SettingsOnPropertyChanged;
             _filters.ForEach(EnvironmentManager.Instance.UnRegisterReceiver);
             _browser?.Dispose();
         }
@@ -130,32 +131,18 @@ namespace ModernBrowser
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        private void AddressBar_OnKeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key != Key.Enter) return;
-            Address = ((TextBox) sender).Text;
-            Panel.Focus();
-        }
-
-        private void Back_OnClick(object sender, RoutedEventArgs e)
-        {
-            _browser.GoBack();
-        }
-
-        private void Forward_OnClick(object sender, RoutedEventArgs e)
-        {
-            _browser.GoForward();
-        }
-
-        private void Refresh_OnClick(object sender, RoutedEventArgs e)
-        {
-            _browser.Refresh();
-        }
-
+        
         private void Home_OnClick(object sender, RoutedEventArgs e)
         {
             _browser.GoHome();
+        }
+
+        private void BrowserViewItemWpfUserControl_OnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F12)
+            {
+                _browser.ShowDevTools();
+            }
         }
     }
 }

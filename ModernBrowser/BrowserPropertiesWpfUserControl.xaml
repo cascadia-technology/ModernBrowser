@@ -12,10 +12,12 @@
     </UserControl.DataContext>
     <Grid>
         <StackPanel>
-            <TextBlock>Address</TextBlock>
-            <TextBox Text="{Binding Address}"/>
-            <!--<TextBlock>Show address bar</TextBlock>
-            <CheckBox IsChecked="{Binding ShowAddressBar}"/>-->
+            <TextBlock Margin="5" FontWeight="Bold">Address:</TextBlock>
+            <TextBox Margin="5" Text="{Binding Address}"/>
+            <CheckBox Margin="5" IsChecked="{Binding ShowNavigationBar}" Content="Show navigation bar" FontWeight="Bold"/>
+            <CheckBox Margin="5" IsChecked="{Binding EnableSmartClientScripting}" Content="Enable Smart Client scripting" FontWeight="Bold"/>
+            <TextBlock Margin="5" FontWeight="Bold">Zoom Level:</TextBlock>
+            <TextBox Margin="5" Text="{Binding DpiScaleFactor, StringFormat={}{0:#0.'%'}}"/>
         </StackPanel>
     </Grid>
 </client:PropertiesWpfUserControl>

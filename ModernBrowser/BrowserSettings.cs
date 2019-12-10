@@ -9,7 +9,7 @@ namespace ModernBrowser
         private readonly BrowserViewItemManager _vim;
         public string Address
         {
-            get => _vim?.GetProperty("Address") ?? "https://www.cascadia.tech";
+            get => _vim?.GetProperty("Address") ?? string.Empty;
             set
             {
                 _vim?.SetProperty("Address", value);
@@ -17,12 +17,34 @@ namespace ModernBrowser
             }
         }
 
-        public bool ShowAddressBar
+        public bool ShowNavigationBar
         {
-            get => bool.Parse(_vim?.GetProperty("ShowAddressBar") ?? "false");
+            get => bool.Parse(_vim?.GetProperty("ShowNavigationBar") ?? "false");
             set
             {
-                _vim?.SetProperty("ShowAddressBar", value.ToString());
+                _vim?.SetProperty("ShowNavigationBar", value.ToString());
+                OnPropertyChanged();
+            }
+        }
+
+        public bool EnableSmartClientScripting
+        {
+            get => bool.Parse(_vim?.GetProperty("EnableSmartClientScripting") ?? "false");
+            set
+            {
+                _vim?.SetProperty("EnableSmartClientScripting", value.ToString());
+                OnPropertyChanged();
+            }
+        }
+
+        public float DpiScaleFactor
+        {
+            get => float.Parse(_vim?.GetProperty("DpiScaleFactor") ?? "100");
+            set
+            {
+                if (value < 25) value = 25;
+                if (value > 500) value = 500;
+                _vim.SetProperty("DpiScaleFactor", value.ToString());
                 OnPropertyChanged();
             }
         }

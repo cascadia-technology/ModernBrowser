@@ -30,6 +30,6 @@
         <TextBlock Grid.Row="1" Grid.Column="1">Address</TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="1">Show address bar</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Address}"/>
-        <CheckBox Grid.Row="2" Grid.Column="2" IsChecked="{Binding ShowAddressBar}" IsEnabled="False"/>
+        <CheckBox Grid.Row="2" Grid.Column="2" IsChecked="{Binding ShowNavigationBar}" IsEnabled="False"/>
     </Grid>
 </client:ViewItemWpfUserControl>

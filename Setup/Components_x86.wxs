@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDERx86">
+            <Directory Id="dir04E5D3A58C400FB6BF979E680544BFA0" Name="x64" />
+            <Directory Id="dir40FBC6A586F2B86AB164CB450EEE4C94" Name="x86" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ModernBrowserPluginx86">
+            <Component Id="cmp404AAB0C3A9AD975467804DB6E1F1A0A" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="filB70814976BBFC3C94288A1C63D7AC101" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\CascadiaControls.dll" />
+            </Component>
+            <Component Id="cmp7A9C75C9C2058BE9DFB4AE145011C7E3" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil7F71A7ED1A557453271028F40FECE8ED" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\CascadiaControls.pdb" />
+            </Component>
+            <Component Id="cmp06DBC8BE06D8860F69144A5A7FAC7377" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil1DBDF929532225A5EA7A86D1C1331E7B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\FontAwesome.WPF.dll" />
+            </Component>
+            <Component Id="cmp4B151329F36F925E2563DB549B28380F" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil620D664BE314F48A561C2A5472A1589F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\ModernBrowser.dll" />
+            </Component>
+            <Component Id="cmp6F7FD3C6BB47AB478723A345A8A9536E" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil6C6B93E2FF4F1DAACE4E0249193040DA" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\ModernBrowser.pdb" />
+            </Component>
+            <Component Id="cmp49063D61E1F7E8DCAA9C5A61F88323E7" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil7834C26B20CDAF970CE097DE38E53BA7" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\ModernBrowserShim.dll" />
+            </Component>
+            <Component Id="cmp6810DDD00BB805EA00980636CBA76E32" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil4D5D1B9AEB0ECDDCD5799030D899B239" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\ModernBrowserShim.pdb" />
+            </Component>
+            <Component Id="cmp33C19D8BB7312004B60CE8221736CFA1" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil61681809BA0CBA126D07723AFDB508BB" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp5030C84E45916DEA9F55385665ACBB60" Directory="INSTALLFOLDERx86" Guid="*">
+                <File Id="fil29840FC371CC31AA0D22B7C4B88617B9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\plugin.def" />
+            </Component>
+            <Component Id="cmp4ED0458D5602C83B526C470FB0004BFB" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filF0FEB8C10B46968331B752FBF6CAF2A9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\cef.pak" />
+            </Component>
+            <Component Id="cmp7A5423BB306AC6C38EBB7129F82E5113" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filFD972BA656DC75A52DB6F7C40121C0E2" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.BrowserSubprocess.Core.dll" />
+            </Component>
+            <Component Id="cmp2A3640A8610B38E6F877A223DD7A7676" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil58629BDFF01038358198698D4871D124" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.BrowserSubprocess.Core.pdb" />
+            </Component>
+            <Component Id="cmpAB1D99EDFEF4EF552D093CECA2632CB2" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filB4A8379DF96DD91990255F6FF11AB7ED" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.BrowserSubprocess.exe" />
+            </Component>
+            <Component Id="cmp24948A7B6535244C9783C82F95E71FE4" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil31CCCF93780EA73F3ADF4F3F96D2E544" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.BrowserSubprocess.pdb" />
+            </Component>
+            <Component Id="cmp24781F7A8DAB17BB9974C6771F84F763" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filC31CFB87C025325CA4E0F03FF55156F8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Core.dll" />
+            </Component>
+            <Component Id="cmp7FC929D23F61FC9B924E9A300EFD19BF" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil5790C15C626292B5CE53E4B72C445E08" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Core.pdb" />
+            </Component>
+            <Component Id="cmpE4163DFB98E5FC498DECDEDBF610A7CC" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filA4BA027CFD228B562776A94934B60ED5" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Core.xml" />
+            </Component>
+            <Component Id="cmp83B54D61F329A4D58824BFF4CE4CADEC" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil6F52C6366ADF07EEE402A8DFB87A1D9C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.dll" />
+            </Component>
+            <Component Id="cmpC9A9E2A4FFA514008FF4A8308F030085" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filAC44A234BC5CF9B5BE507576D54A3966" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.pdb" />
+            </Component>
+            <Component Id="cmp34274B80EFB2C12838EBC49124483A06" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filD1A8185B26D4A47B61B0F440823E5047" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Wpf.dll" />
+            </Component>
+            <Component Id="cmpBE5312048A676A278C5A1CCC3DD6FC97" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filD6303FFD484A3E6E0C8C89886BCCE363" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Wpf.pdb" />
+            </Component>
+            <Component Id="cmp27B5C388E5A66F94DD88FD0FF25E0434" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil62B52669E0E04663FB4D70D680096E28" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.Wpf.XML" />
+            </Component>
+            <Component Id="cmp63AFEB0DFE4F20F3CE15A7EA82201D1D" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filC0ED2AE00229E8A75C03EA3C1936BD99" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\CefSharp.XML" />
+            </Component>
+            <Component Id="cmpFF35E00902CE7F14A98BFA443F2DD8F4" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil6820461E4F388F87D3F6FF72D8FE497B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\cef_100_percent.pak" />
+            </Component>
+            <Component Id="cmpEA093CB7DC967B37B5EB6C8F7F988DB4" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil5E3997B9176EE8937442551125084B08" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\cef_200_percent.pak" />
+            </Component>
+            <Component Id="cmpCB2C40108E845075B10639C436A4726A" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filB3AEAE8DCFF9DBECBE5328D9BA47483D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\cef_extensions.pak" />
+            </Component>
+            <Component Id="cmpE515E2BAB87E66035527607DB43DD1FA" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filF508039518C532240F0BDD6D502E1E2D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\chrome_elf.dll" />
+            </Component>
+            <Component Id="cmp65085850FC0BD2AA1AD4FC79367D941B" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil17C8F4859EC99BD4A6E6DE4F87C9BA8F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\d3dcompiler_47.dll" />
+            </Component>
+            <Component Id="cmp6FCECB3A08969E01C4C85A480858F460" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil00675D2BF72E05F0537F7452A9D698B2" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\devtools_resources.pak" />
+            </Component>
+            <Component Id="cmp89C5F62B7401267380AEAE222F88C0D9" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil1A4ACCF3C00C7CE5BACECAE94BA93B7F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\icudtl.dat" />
+            </Component>
+            <Component Id="cmp9F60F4EF1E9C5B17AE5969418F4D3D08" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filD68D20BD0FEF4BE35644D485C4691599" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\libcef.dll" />
+            </Component>
+            <Component Id="cmpD78A742F0487D33C8D7D11A7BDAA468E" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil80A7833E28ECF718DF9A617B5E20D9C6" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\libEGL.dll" />
+            </Component>
+            <Component Id="cmp782775FD8A83A08615BCACF3599FB740" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil94A1E00E6975237C5F0E3DE00A74E478" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\libGLESv2.dll" />
+            </Component>
+            <Component Id="cmp99F394DB5C3B2FDF5CA1E490947AFD43" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filF7A6735A7942CC02A89FFEE571F09494" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\natives_blob.bin" />
+            </Component>
+            <Component Id="cmp670D05BC4E78E1B253FE09F45A71A049" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filB80E4C9C69E90020FE1D4DF809F81A93" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\README.txt" />
+            </Component>
+            <Component Id="cmp056008D0DD5D658D9AA0D7286C405552" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="fil001B45EE2ED5E0CEB23C8353DE18ED4D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\snapshot_blob.bin" />
+            </Component>
+            <Component Id="cmpBBA58B4FDFEDD55248A092427D3BA537" Directory="dir04E5D3A58C400FB6BF979E680544BFA0" Guid="*">
+                <File Id="filC1BA1C8FF13FB7DD2D1F11F7A4D0BDF8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\v8_context_snapshot.bin" />
+            </Component>
+            <Component Id="cmpAB92961C1531A966F0A5B59EA1D6B05A" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil55D476952FADBD1A0DB7D675C19F0E9B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\am.pak" />
+            </Component>
+            <Component Id="cmp258360F85CA124204BBAA0E85F6269DD" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filF6FDBDE8AB4C1A1275DC69B046BD0677" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ar.pak" />
+            </Component>
+            <Component Id="cmpA2D6B8C216CA48DCC1E6A3F2AF80228F" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filC4806B30F370523D188492E1092253C4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\bg.pak" />
+            </Component>
+            <Component Id="cmp8DEDF6D9664F80807A5B92EE2B640EA9" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil2E3938372D9F5ECA7F16F1E1FEA31295" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\bn.pak" />
+            </Component>
+            <Component Id="cmp3E7F591209D946FF17C96101462BA8A8" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil8874AD1AD50B6F8A9F6A252A173B0A97" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ca.pak" />
+            </Component>
+            <Component Id="cmpC74053EC492F887112D90729BCCA0F61" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil67B9EE2C8F686CE47078D3CE921A59E0" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\cs.pak" />
+            </Component>
+            <Component Id="cmpAD3AB2F91A7D0834C6E61CB0955CA30F" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil69BD8FEE25E07C5E8C2DCB7A55D26A62" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\da.pak" />
+            </Component>
+            <Component Id="cmpDE42D5D7160DEEC10E63F8D95B145E2C" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filA052590983C6FE2428A7AA47E09E2445" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\de.pak" />
+            </Component>
+            <Component Id="cmpDD973EFE36E282414AA535578C62D963" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filC1F82482AF638256D44AB40262B9F4A8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\el.pak" />
+            </Component>
+            <Component Id="cmp2E8A059DBB6DCDDA613DD854A9AD9BFC" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filE2C7A9393D979747562FAAD1E9CD60E8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\en-GB.pak" />
+            </Component>
+            <Component Id="cmpFC3541AAE1BA94DEE95685D7B8F68BA2" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil923EF34C1ED27318A2FEFA871ABC08B6" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\en-US.pak" />
+            </Component>
+            <Component Id="cmp5490A05C8047A67F148FCC5FCD51D2E3" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil5A9570C25A37D15EB9D40803D099E2F4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\es-419.pak" />
+            </Component>
+            <Component Id="cmp0651D9DC27E73F10A8E5D1B80EAB84EC" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filA1F04B7B0CF0E231F351A3369AFEB88A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\es.pak" />
+            </Component>
+            <Component Id="cmp7DFB7103DD93AD21C3C9D8B71249FD07" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil3BB81AC52A65AD93FD0581C96AB473E9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\et.pak" />
+            </Component>
+            <Component Id="cmpA9037847F0F1668EE3DA3F4B22B12CA0" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil2CF2E45D911E462A5ED0DDD448128EAA" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\fa.pak" />
+            </Component>
+            <Component Id="cmp82064AC62E66BEF002837D124C316BB8" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil237B59F0D5C523B0AA8969A25B2E8C47" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\fi.pak" />
+            </Component>
+            <Component Id="cmp713B946D3BEB2C79425599BABD226E4D" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filD2CEA4D81A5AC4ED2364278E3508AB9F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\fil.pak" />
+            </Component>
+            <Component Id="cmp741128D2B7EE1EAE83A86F675F1060B3" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil0474F9587B7032853E27AB027C0B77D4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\fr.pak" />
+            </Component>
+            <Component Id="cmp9A451B9D709A94D91044260DCB62E249" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filB12B05882B397540D20639921A2E408F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\gu.pak" />
+            </Component>
+            <Component Id="cmpB5ED5587FFFBC7CA40A0EA2020F2DEE3" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filA3BD0C427FE20E0AD181700F35F7A740" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\he.pak" />
+            </Component>
+            <Component Id="cmpB5F1C92153AB2A3C1187C4B12CE943B9" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil829C58B8A84FEB6BCBFA3CFAEEE07C56" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\hi.pak" />
+            </Component>
+            <Component Id="cmp9FDC3BB13B0F10A9A54E4C6BD997D180" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil65FCD50689077F0290CC985A10F67BE8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\hr.pak" />
+            </Component>
+            <Component Id="cmp04A3A453B09693F30931AEBA005E5B7C" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filB174765EB62CE0608844B1DDA5C86B18" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\hu.pak" />
+            </Component>
+            <Component Id="cmp322D7AB43C4FDD07A56C3D63E11298CA" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil0B0D1F45A2B253554893251F549DB5F8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\id.pak" />
+            </Component>
+            <Component Id="cmpC31CCB68539AC7399E2CA45E81DED55F" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filB85CD28581F56B76C604119EDCDD4E7D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\it.pak" />
+            </Component>
+            <Component Id="cmp1464BB33698A6E06EFD4A61AB89A7AD0" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filAACBDA621AB42D6BBB9454348776D67A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ja.pak" />
+            </Component>
+            <Component Id="cmpACA0ED02C0951635B8799155AC23C911" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil2AEB985912BB2C7C9837159CD9A279E7" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\kn.pak" />
+            </Component>
+            <Component Id="cmpA12471EEA786AAB42C9E9330C51604F5" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil270E45415E2470CAC7C5664320DB8C19" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ko.pak" />
+            </Component>
+            <Component Id="cmp46DE95F0B9DC2F813CEA70EBD3608BB8" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil54D4A77D58A2150119B72596D90612FF" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\lt.pak" />
+            </Component>
+            <Component Id="cmpA03340E0B2080A971CF5D3DF151B32A8" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil37069C30D08017452AB2529DDA8A908A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\lv.pak" />
+            </Component>
+            <Component Id="cmp2B526CD51C0669A886A02DCDB9B24C89" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil2E0D9B61363D16210E87122D0059C1EF" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ml.pak" />
+            </Component>
+            <Component Id="cmp7E92FF62078F8419ECAF2B2E7241C469" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil3334DF5F7FA10ADD7DC4C292BA7BA479" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\mr.pak" />
+            </Component>
+            <Component Id="cmp75A6393D419028F9DAACC4507DB1997F" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filA81A88AF53497FFCCC574F19F7258B9B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ms.pak" />
+            </Component>
+            <Component Id="cmp6BF07EFFFD508E04094AD8E450879F6D" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil59566632A2B0932CFB90202F22A120EC" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\nb.pak" />
+            </Component>
+            <Component Id="cmp458E9522909D767589734B1D9932B4E2" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filA7496A7F5C46DA7ECE2E37002EB0C55C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\nl.pak" />
+            </Component>
+            <Component Id="cmpF03CE331495BFA43817FD9C9A94B7FD6" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filF9CBFF75486E5B5FEF836DB007D2FB64" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\pl.pak" />
+            </Component>
+            <Component Id="cmp3F7BE53FD42579C418576EDE1BD746FA" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil565B061D4BF790CFE28A06212E795EB4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\pt-BR.pak" />
+            </Component>
+            <Component Id="cmp820D123356F91E3510AF363DEE2CBD38" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil9B6508447D8C308907A186ADD89D361F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\pt-PT.pak" />
+            </Component>
+            <Component Id="cmp0737232D0A8A385C43CD4C680612A80C" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil1C222F4FB23AFC77DCAD84C43F311961" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ro.pak" />
+            </Component>
+            <Component Id="cmp12C5FA160C295DCCC6F8501691DC9DFE" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil8AE98A96F64B39DB85B3103E78547817" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ru.pak" />
+            </Component>
+            <Component Id="cmp068FAEE7E7DF0BAAEC154DDAF6B0ED96" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil31035C6C64401FEC03C704B67B83169C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\sk.pak" />
+            </Component>
+            <Component Id="cmp1C2A65842E24F85600E6C9CCBED19181" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filC7EEDFE1F030717CC1AABB00584EA4D8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\sl.pak" />
+            </Component>
+            <Component Id="cmp2D3800A142C4C3323A489CCD8F4450B4" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil6413077242D79440D36645C1A69E9FEF" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\sr.pak" />
+            </Component>
+            <Component Id="cmpC790D61560E351DA38AC27C5D7871265" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil0A857309272739FAA09437DE4A365156" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\sv.pak" />
+            </Component>
+            <Component Id="cmp3C52371819A6622787D033E9550F73F7" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filFA6CF98369604D4B639F65D7AD9416DD" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\sw.pak" />
+            </Component>
+            <Component Id="cmpED9A8446A7B1C7F1030EFBB2C8993039" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil90B4DC6F6CEA38124CBD363C120C2F7F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\ta.pak" />
+            </Component>
+            <Component Id="cmp8E1CC39DF038728BAE9966E0F0A4AD42" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filBCFEFA6E356C1437A4ACBC50F97AAF12" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\te.pak" />
+            </Component>
+            <Component Id="cmpF73E885F7DF9C328804F328C228ADC27" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filDA1AA5935AC0618B9F73988CAF604AB2" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\th.pak" />
+            </Component>
+            <Component Id="cmp164563D329808160D9AB72DA710C6B41" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil8CC9AF6BCA16F2F2D985E973895EB6C1" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\tr.pak" />
+            </Component>
+            <Component Id="cmp83E9913DA66B093BC37208A04AAD01B0" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="filC100ABC60DCCB766DC32FAC48F27110E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\uk.pak" />
+            </Component>
+            <Component Id="cmpFCCD001C8C3944F897F2CC3DF0F41CAD" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil767742F0E4ADEBF0347F4052A7BB78B1" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\vi.pak" />
+            </Component>
+            <Component Id="cmp0CB4FA4E40D7E8E01B6201875D48C177" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil947880BE39E12FB9F00DDABDF423B756" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\zh-CN.pak" />
+            </Component>
+            <Component Id="cmpCC279C393F4F1F9365DAC9DDC5F1C5CB" Directory="dirA7F7EF7DEB2288B79C3F694A49D136E1" Guid="*">
+                <File Id="fil9DC2CFB3DDE476B889CD7E3FB68D8400" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\locales\zh-TW.pak" />
+            </Component>
+            <Component Id="cmp31511BDFF0ED3BBCB996426934B5ABED" Directory="dir0120292605556668DF1C5BB216B31EFE" Guid="*">
+                <File Id="fil5CFB9EF58C9A5E5508C7319F9689E75E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\swiftshader\libEGL.dll" />
+            </Component>
+            <Component Id="cmpBBBAE09C4BF6249EB7EEFEF3D9A69691" Directory="dir0120292605556668DF1C5BB216B31EFE" Guid="*">
+                <File Id="filE55CB39F480AE8EA03F52AA890CA1C4A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x64\swiftshader\libGLESv2.dll" />
+            </Component>
+            <Component Id="cmpEEFF0A9DAE22E675BE28B222185936D5" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil7A0000A43A6A26E96EA805299D433C06" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\cef.pak" />
+            </Component>
+            <Component Id="cmpD9A67F13AAC4E74C8063BAB8D12BF371" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil0A8E1363A9E7CE6D6FE1D6F52A133B0A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.BrowserSubprocess.Core.dll" />
+            </Component>
+            <Component Id="cmp11012691C378D5553A6C8F21498C9366" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil10183646ACB8976F46EEBDD40AE6F6E6" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.BrowserSubprocess.Core.pdb" />
+            </Component>
+            <Component Id="cmp51158890B8CD7B04893EDBDEAB4B4FB0" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil700DFD95A2FCCE289DCDBDF2762DCFBA" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.BrowserSubprocess.exe" />
+            </Component>
+            <Component Id="cmp735242CAC29C433507D6246C841E09E2" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil1C640D7FE2B91001F3E76189CF0D2C34" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.BrowserSubprocess.pdb" />
+            </Component>
+            <Component Id="cmp46EEB5C9B973B1373A40A34C78A977CF" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filCF548CE2D2A5393C9DD052313C21BBD6" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Core.dll" />
+            </Component>
+            <Component Id="cmp61C2FB010B1DA908A292CC26183B0355" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filA020B02FD652C8DD27D911EE5ED4AE7B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Core.pdb" />
+            </Component>
+            <Component Id="cmp0460D07B571BA4B7B518A4C24D7FC849" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil014710FC09244E9C04251DE053497152" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Core.xml" />
+            </Component>
+            <Component Id="cmpC4ABFA3284951E78E109AF23EEF1F2BB" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filF18DA7663FFFB7393336621251AE54A2" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.dll" />
+            </Component>
+            <Component Id="cmp2332C1F64F9CFCE0CB60FCB6D3C3A9CF" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil7CEE2543EB5F98B7F5196547B8DE4A7B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.pdb" />
+            </Component>
+            <Component Id="cmpDF364D4DEFB4CAD7C9560A7BB27D39BC" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil48DA05A9B975BF2B602B8D59239EBB68" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Wpf.dll" />
+            </Component>
+            <Component Id="cmp8FAD545635382B2B2700D9FAA5F88EF8" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filF83BC4507772BFFB4121DB22F206CA83" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Wpf.pdb" />
+            </Component>
+            <Component Id="cmpB663154AE74A1F5A6E97BADFCE8EE07D" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil982F8024B20C608795DFB36EA703A2BC" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.Wpf.XML" />
+            </Component>
+            <Component Id="cmp1368580F060D5BDBD772844D9FCA63B4" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil7DDCCEA2B60D12799F33F3523C71E773" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\CefSharp.XML" />
+            </Component>
+            <Component Id="cmpFBA5777583AA022F1CD5EBC9630E3A7E" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil3020D702E05CDDD2C88E74740E846F19" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\cef_100_percent.pak" />
+            </Component>
+            <Component Id="cmp5AFA9A0C74061DD22EE0B079ED0592BA" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil8316C8CFEC7DC5C0743A95BC45E695A0" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\cef_200_percent.pak" />
+            </Component>
+            <Component Id="cmpEBCC5EB62B05B3E9FBF51F12A5227C12" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil41EA598604F35A2E6999E3276F7EF9A4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\cef_extensions.pak" />
+            </Component>
+            <Component Id="cmpD507943AE629D785C8E19FBD1DBBB52B" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil1FC5188246741FF6B9BF92BCD43A21F4" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\chrome_elf.dll" />
+            </Component>
+            <Component Id="cmpD9B6A8B291FF50EA4C37C6C590BC6D43" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filD25DBFCE9232D00BF2732D88F2335076" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\d3dcompiler_47.dll" />
+            </Component>
+            <Component Id="cmpFDFE574C3C04D8F933DB32E28769E0D1" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil548015E249305BB47CA1E7A63491D098" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\devtools_resources.pak" />
+            </Component>
+            <Component Id="cmp9063C4891E9BFE75779226AE773ABCE2" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filD7B5E4E3C3CD7CA7B4C4810DD36FA7DC" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\icudtl.dat" />
+            </Component>
+            <Component Id="cmp6FCFBF7BFCE4192A2DBF79FC9D45F4EE" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filC093C0197E8F4C3D323D44C89AD10DF9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\libcef.dll" />
+            </Component>
+            <Component Id="cmpDC02A9387AE15D8AA9EA56E070162713" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil45305F0FDF933CF55EE124773BAA8653" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\libEGL.dll" />
+            </Component>
+            <Component Id="cmp371D9C9A6270A5628EE6F06648D47D90" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filFAA361FB88E4CFFC52C8CFD08BE0585A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\libGLESv2.dll" />
+            </Component>
+            <Component Id="cmp1D55BC1237ADDB2F7B94CFB6CB560B19" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filD0F8FDB8C6179A0FFD5A25E819FD799C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\natives_blob.bin" />
+            </Component>
+            <Component Id="cmp8283D243AFBE93385E77499685923C62" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="filBD4475E9F6D6A59FA2DE3FC0A23D7EF7" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\README.txt" />
+            </Component>
+            <Component Id="cmpD1A1FA7CAE6A8F79A24B259D539D7EE2" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil897164C79D0BBDC67B9EA3F90049B921" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\snapshot_blob.bin" />
+            </Component>
+            <Component Id="cmpD7A9A99F9E14323C8AE771ADC7C233BC" Directory="dir40FBC6A586F2B86AB164CB450EEE4C94" Guid="*">
+                <File Id="fil9EF428365A76F5FBD8CABB739998308E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\v8_context_snapshot.bin" />
+            </Component>
+            <Component Id="cmpFAA45D3318FE1CF3D12415A5662916D3" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil77D02ADB6634AB4E62D60806608A64A5" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\am.pak" />
+            </Component>
+            <Component Id="cmp1E94E3FC631ECBF9BBAE39F367BFBB2D" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil46CF42BA8909354252655F2D2FBF04AE" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ar.pak" />
+            </Component>
+            <Component Id="cmpB23429AED25184B37739495EEE254811" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filC7BEF99253818C1CF89D6793C952D82B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\bg.pak" />
+            </Component>
+            <Component Id="cmp1CD8CE53383E75BADE7689837F601B61" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil2F17FC8D5A60DEAAE536F3D8A056AF70" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\bn.pak" />
+            </Component>
+            <Component Id="cmpE5C5EB9766833782C37F2CB2A148C462" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil5E1EEECB0D0E257CB8068C3A045668A5" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ca.pak" />
+            </Component>
+            <Component Id="cmpBA1035C7E3CF02117B731502BB19EE13" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil68F3081951B276E64D4C58C48083B377" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\cs.pak" />
+            </Component>
+            <Component Id="cmp5C7F8F584C06C9950BCC8BE34BA985F3" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil3B9C225A86F912EFB615EE194DE5965B" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\da.pak" />
+            </Component>
+            <Component Id="cmp4D809D207F3383B13A57DFEE7844947B" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil51BA836C8259CB2C7DB08C5002DAD869" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\de.pak" />
+            </Component>
+            <Component Id="cmp3C5D06ABAE52826453E70E7DB9E4B11C" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filB90C6D26395B63F1C4B4CE0B9F1888F7" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\el.pak" />
+            </Component>
+            <Component Id="cmpE765AFA582C8237F3F86ED0ADB796BEA" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filB8928001D45D898A7F6263FAA18C4597" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\en-GB.pak" />
+            </Component>
+            <Component Id="cmp43B5926BFF1BF7802C242BE7B3832302" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil2AD0C0A502620CB1F4C7E0C7A18AAF9A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\en-US.pak" />
+            </Component>
+            <Component Id="cmpBCB9F871AF8D1FC82823CF1E210C20CD" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil1E7852452502E74051E2B1A09AE1445F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\es-419.pak" />
+            </Component>
+            <Component Id="cmpCB926536CF2A558E47C60BE5E8AED9DC" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil73FF43C9DB83EB21842B9B6E32574B3E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\es.pak" />
+            </Component>
+            <Component Id="cmp04779A7B17D01EE55F9B355D98DF3C60" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil82D62C4ADD7668D7E2677343EF455887" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\et.pak" />
+            </Component>
+            <Component Id="cmpAA1B8AF63432EDDF6F0278EB7E69F81E" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil82ACDB99FEE5400525AC3E53BF3036F9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\fa.pak" />
+            </Component>
+            <Component Id="cmp3493494059CB8D158DDD888E3F6D9387" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil2FB825811F788C34183CD993AD481340" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\fi.pak" />
+            </Component>
+            <Component Id="cmp39C4B55B439B05C4097ACE3159D73EFA" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filACAAD2BEADFC08F63132C23436B32885" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\fil.pak" />
+            </Component>
+            <Component Id="cmp2EEEADDC6ADBE0AE636698BB8DC43416" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil09F32D058CA1BE2C095AE0DE4EE1D30C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\fr.pak" />
+            </Component>
+            <Component Id="cmp6B2C2BF1D99046AB9FA3DDCF052225EC" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil64E910A0136AEE778702D56463DDCA43" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\gu.pak" />
+            </Component>
+            <Component Id="cmpBBE20A701F098BB591E06EDD223ABEB1" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filA3A7D2C727F618D4EE49C560FE9E046F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\he.pak" />
+            </Component>
+            <Component Id="cmp177D5A44BAF43AF9D7DEA9698B6FF45A" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filD0015FD3F0175C1C731C4C19EAE9FBE1" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\hi.pak" />
+            </Component>
+            <Component Id="cmpE6DDEF2A6D6E54CCC4861EEE408A8585" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filB27948F59717531625D95CDA1D674E4D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\hr.pak" />
+            </Component>
+            <Component Id="cmp8AF5C02F276AAD7EF5B64B408B42017A" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filAD0FF969645D556AEEC0FB337BBACFB1" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\hu.pak" />
+            </Component>
+            <Component Id="cmp22400D16F44BA813459D72345DCC5505" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filE6914029E1B9986C94207C59059F6B7A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\id.pak" />
+            </Component>
+            <Component Id="cmp6196F06E1EDE5FECADFDED77B56327C7" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil2A92BC5DF5B5EBDFB4AD87432946A9C3" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\it.pak" />
+            </Component>
+            <Component Id="cmpB12D0EA501A8E22AA838441D7136E645" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil0CE06311F92712E60C9BD587ED7DCE4F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ja.pak" />
+            </Component>
+            <Component Id="cmp81BADD93588C8CF0619D5A6F4A7914B8" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil9B65613B04FC39B8B14140A72F0BEED0" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\kn.pak" />
+            </Component>
+            <Component Id="cmp3889EAB81A6922775747EBFC7B0F4621" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil3752B37731F449B9E93A1983956DBE5E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ko.pak" />
+            </Component>
+            <Component Id="cmp60C2D530157A6097B035BD8658666C9F" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filE41337E4B8DFB048ECCA117E9A4654D1" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\lt.pak" />
+            </Component>
+            <Component Id="cmp158792CB7B8CD17302AF7933F5CE56FF" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil0159C4FC74A11DF267E2D89C00F922B2" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\lv.pak" />
+            </Component>
+            <Component Id="cmpD2430555E069BAD2B01E1C18E3075934" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil1F946F20FDF8CFA396E9D92E1B54B46D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ml.pak" />
+            </Component>
+            <Component Id="cmpE28FDA6A64712E8038ED57B10EED85CD" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil346D736442059F4C0C27DFBC31D33DB9" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\mr.pak" />
+            </Component>
+            <Component Id="cmp64D23A0CEDF4D1A6F4EF865A32BE5100" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil2E2A6F5AC2843156503C12D421D0300C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ms.pak" />
+            </Component>
+            <Component Id="cmp283555809A512F79CFA4ED0C8F442FED" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil3E6759C56714F9E3E7615CCF95DF9A9A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\nb.pak" />
+            </Component>
+            <Component Id="cmp16222422891AA694AA7FCA173B493367" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filAC61EB7E1374B7179E76F1FD1CBE9DA5" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\nl.pak" />
+            </Component>
+            <Component Id="cmpD315EBC3C92052051216AA19AAB3507B" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil59231FC8BF6595AE8C103EF3FC04003F" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\pl.pak" />
+            </Component>
+            <Component Id="cmp686FEAC9008146DACF56BDF9C8D43E64" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil4F77417B8C7640A7F336EF91BF1D428E" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\pt-BR.pak" />
+            </Component>
+            <Component Id="cmp1CDE9B95D9C8510FE2896D576F30D8F0" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filD9C960C88A47BCAE4487853CB3836555" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\pt-PT.pak" />
+            </Component>
+            <Component Id="cmpD3EDE732F984BC9D7BAAEEA825CAA663" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil3F1E70D3736793CD465BF05FB4986446" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ro.pak" />
+            </Component>
+            <Component Id="cmp58B5B8AA4A67BC21F39A651909B5A87E" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil685957009789F6C955392A11A1EEDBAB" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ru.pak" />
+            </Component>
+            <Component Id="cmp072F528667B1F397F4488476D87E121B" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filE264728ABC3280F959ECF7BC382AABED" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\sk.pak" />
+            </Component>
+            <Component Id="cmpF34307AEE770A4C4336C149B3A74AA91" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil64113551FC157628CED955BC4F3A0201" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\sl.pak" />
+            </Component>
+            <Component Id="cmp2E2E8113EBD48DFAB04BC0552DF17C0A" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filE0F47799D291DC5356821EFE0605722A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\sr.pak" />
+            </Component>
+            <Component Id="cmpEFE27CD8C2087E23BCA0AD798086CE4C" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil19552BCECA201208FCB37FF6FC17BE3C" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\sv.pak" />
+            </Component>
+            <Component Id="cmp98C2B747DA29EFE7EB9BF73C97CBE3D3" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil012AB0F5690D932D137F48FF3A75BD93" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\sw.pak" />
+            </Component>
+            <Component Id="cmp77BA7C128DD4F5091927EA76A7B1379C" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filC3158255FA13DD17504031272D5DDDE8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\ta.pak" />
+            </Component>
+            <Component Id="cmp729CAA80698D949729A55F93781CE014" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil83948A0D2324EB0975B3720D4B4AFF80" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\te.pak" />
+            </Component>
+            <Component Id="cmpCA3C6E324A4A3380737C90CDCFD40E70" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil7E18B8A627FAFCA4E032DCDE93A30F7A" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\th.pak" />
+            </Component>
+            <Component Id="cmp6E0AEC05B4321334A0C268F6E382D562" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filF75490C8517CCE835932AB7CF98D7A7D" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\tr.pak" />
+            </Component>
+            <Component Id="cmp5E560B5B6FA59C622631D6FE39EE6877" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil3C86049CEC056ACD052E805DB18E1618" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\uk.pak" />
+            </Component>
+            <Component Id="cmp7F48EEA2F981BBAA09419BCF3A220B74" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="fil239494276D23A961373BB7B91B1C29AE" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\vi.pak" />
+            </Component>
+            <Component Id="cmp781F6EE4F3064B52B58DFD0F8A6A84E6" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filA93AAE797D432BF87F7D7607FD3BD315" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\zh-CN.pak" />
+            </Component>
+            <Component Id="cmp229C9A26E6F3DF272416938F8B6DE36A" Directory="dirE63B18C92852FCEE87D089618E134116" Guid="*">
+                <File Id="filAF21D629E17B4827F0758D8EDB82E0AE" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\locales\zh-TW.pak" />
+            </Component>
+            <Component Id="cmp8E8E43F4DD860BAF62CCB40DFE549E0D" Directory="dir123555990E25A68DAD971E19DA97005F" Guid="*">
+                <File Id="filAF70EA676E0FCE494F02D5BFBE02C4C6" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\swiftshader\libEGL.dll" />
+            </Component>
+            <Component Id="cmp23C7DA76E6509CEFCE4C66B0080B0963" Directory="dir123555990E25A68DAD971E19DA97005F" Guid="*">
+                <File Id="fil0F1DAB9F5E7F0E0D4C0056104C1D53E8" KeyPath="yes" Source="$(var.ModernBrowser.TargetDir)\x86\swiftshader\libGLESv2.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir04E5D3A58C400FB6BF979E680544BFA0">
+            <Directory Id="dir0120292605556668DF1C5BB216B31EFE" Name="swiftshader" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir40FBC6A586F2B86AB164CB450EEE4C94">
+            <Directory Id="dir123555990E25A68DAD971E19DA97005F" Name="swiftshader" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir04E5D3A58C400FB6BF979E680544BFA0">
+            <Directory Id="dirA7F7EF7DEB2288B79C3F694A49D136E1" Name="locales" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir40FBC6A586F2B86AB164CB450EEE4C94">
+            <Directory Id="dirE63B18C92852FCEE87D089618E134116" Name="locales" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>

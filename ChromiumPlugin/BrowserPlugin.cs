@@ -4,9 +4,10 @@ using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using VideoOS.Platform.Client;
+using CefSharp.Callback;
+using ModernBrowserShim.Properties;
 
-namespace ChromiumPlugin
+namespace ModernBrowserShim
 {
     public static class BrowserPlugin
     {
@@ -26,11 +27,35 @@ namespace ChromiumPlugin
                     Environment.Is64BitProcess ? "x64" : "x86",
                     "CefSharp.BrowserSubprocess.exe"
                 );
-                var settings = new CefSettings { BrowserSubprocessPath = browserSubProcessPath, CachePath = cachePath };
+                var settings = new CefSettings
+                {
+                    BrowserSubprocessPath = browserSubProcessPath, 
+                    CachePath = cachePath, 
+                    BackgroundColor = 0xFF,
+                    UserAgent = "ModernBrowser/1.0 (Windows; Win64; x64) Chromium",
+                    LogFile = Path.Combine(cachePath, "debug.log")
+                };
+                settings.RegisterScheme(new CefCustomScheme {
+                    SchemeName = "help",
+                    SchemeHandlerFactory = new AboutSchemeHandlerFactory()
+                });
                 Application.Current.Dispatcher?.Invoke(() =>
                     Cef.Initialize(settings, performDependencyCheck: false, browserProcessHandler: null));
                 _initialized = true;
             }
+        }
+    }
+
+    public class AboutSchemeHandlerFactory : ISchemeHandlerFactory
+    {
+        public IResourceHandler Create(IBrowser browser, IFrame frame, string schemeName, IRequest request)
+        {
+            if (request.Url.Equals(@"help://script/"))
+            {
+                return ResourceHandler.FromString(Resources.AboutScript);
+            }
+
+            return null;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Windows;
 using VideoOS.Platform;
 using VideoOS.Platform.Client;
 
@@ -34,7 +35,6 @@ namespace ModernBrowser
             _pluginPath = new FileInfo(GetType().Assembly.Location).DirectoryName;
             AppDomain.CurrentDomain.AssemblyResolve += ResolveCefSharpAssemblies;
             AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += ResolveCefSharpAssemblies;
-
             ViewItemPlugins.Add(new BrowserViewItemPlugin());
         }
         private Assembly ResolveCefSharpAssemblies(object sender, ResolveEventArgs args)

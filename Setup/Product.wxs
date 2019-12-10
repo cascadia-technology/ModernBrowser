@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product 
+    Id="*" 
+    Name="Modern Browser Plugin" 
+    Language="1033" 
+    Version="1.0.0.0" 
+    Manufacturer="Cascadia Technology LLC" 
+    UpgradeCode="edb99b14-1f3e-4730-b26f-bef8061fab6a">
+		
+    <Package 
+      InstallerVersion="200" 
+      Compressed="yes" 
+      InstallScope="perMachine"/>
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="icon.ico" SourceFile="icon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico"/>
+
+    <UIRef Id="WixUI_Minimal"/>
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf"/>
+    <WixVariable Id="WixUI" Value="license.rtf"/>
+    <WixVariable Id="WixUIInfoIco" Value="icon.ico"/>
+    <WixVariable Id="WixUINewIco" Value="icon.ico"/>
+    <WixVariable Id="WixUIUpIco" Value="icon.ico"/>
+
+    
+    
+
+    <PropertyRef Id="NETFRAMEWORK45"/>
+    <Condition Message="This application requires .NET Framework 4.7. Please install the .NET Framework">
+      <![CDATA[Installed OR NETFRAMEWORK45>="#461308"]]>
+    </Condition>
+
+
+    <Feature Id="ProductFeature" Title="Setup" Level="1">
+			<ComponentGroupRef Id="ModernBrowserPlugin" />
+			<ComponentGroupRef Id="ModernBrowserPluginx86" />
+		</Feature>
+	</Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="VideoOSDir" Name="VideoOS">
+          <Directory Id="MIPPluginsDir" Name="MIPPlugins">
+            <Directory Id="INSTALLFOLDER" Name="ModernBrowser"/>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="VideoOSDirx86" Name="VideoOS">
+          <Directory Id="MIPPluginsDirx86" Name="MIPPlugins">
+            <Directory Id="INSTALLFOLDERx86" Name="ModernBrowser"/>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>

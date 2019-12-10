@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Input;
-using ChromiumPlugin;
+using ModernBrowserShim;
 using VideoOS.Platform.Client;
 
 namespace ModernBrowser

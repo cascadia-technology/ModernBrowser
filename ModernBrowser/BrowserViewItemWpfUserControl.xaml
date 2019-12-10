@@ -3,31 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
              xmlns:client="clr-namespace:VideoOS.Platform.Client;assembly=VideoOS.Platform"
              xmlns:local="clr-namespace:ModernBrowser"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              MouseDown="BrowserViewItem_MouseDown"
              MouseDoubleClick="BrowserViewItem_MouseDoubleClick"
-             >
+             KeyUp="BrowserViewItemWpfUserControl_OnKeyUp">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Name="AddressBar">
+        <Grid Grid.Row="0" Name="NavigationBar">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Horizontal">
-                <Button Click="Back_OnClick">Back</Button>
-                <Button Click="Forward_OnClick">Forward</Button>
-                <Button Click="Refresh_OnClick">Refresh</Button>
-                <Button Click="Home_OnClick">Home</Button>
+                <Button Command="{Binding BackCommand}" Margin="5">
+                    <fa:ImageAwesome Name="NavBack" Icon="ChevronLeft" Height="12"/>
+                </Button>
+                <Button Command="{Binding ForwardCommand}" Margin="5">
+                    <fa:ImageAwesome Name="NavForward" Icon="ChevronRight" Height="12"/>
+                </Button>
+                <Button Command="{Binding ReloadCommand}" Margin="5">
+                    <fa:ImageAwesome Name="NavRefresh" Icon="Refresh" Height="12"/>
+                </Button>
+                <Button Click="Home_OnClick" Margin="5">
+                    <fa:ImageAwesome Name="NavHome" Icon="Home" Height="12"/>
+                </Button>
+                <Button Command="{Binding PrintCommand}" Margin="5">
+                    <fa:ImageAwesome Name="NavPrint" Icon="Print" Height="12"/>
+                </Button>
             </StackPanel>
-            <TextBox Grid.Column="1" Text="{Binding Address}" KeyUp="AddressBar_OnKeyUp" />
         </Grid>
-        <Grid Grid.Row="1" Name="Panel" />
+        <Grid Grid.Row="1" Name="Panel" Background="White" />
     </Grid>
 </client:ViewItemWpfUserControl>

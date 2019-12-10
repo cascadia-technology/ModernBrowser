@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using ChromiumPlugin;
 using VideoOS.Platform.Client;
 
 namespace ModernBrowser
