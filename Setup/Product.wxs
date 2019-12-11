@@ -11,7 +11,11 @@
     <Package 
       InstallerVersion="200" 
       Compressed="yes" 
-      InstallScope="perMachine"/>
+      InstallScope="perMachine"
+      Description="Chromium browser plugin for Milestone XProtect Smart Client"
+      Comments="Developed by Joshua Hendricks"
+      Keywords="MIP,SDK,MIPSDK,MIP Plugin,Chrome,Chromium,CefSharp,Cascadia,Browser,ViewItem"
+      />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate EmbedCab="yes" />
