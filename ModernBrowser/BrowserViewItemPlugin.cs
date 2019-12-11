@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Input;
+using ModernBrowser.Properties;
 using ModernBrowserShim;
 using VideoOS.Platform.Client;
 
@@ -19,7 +20,7 @@ namespace ModernBrowser
         {
             Id = Identifiers.ModernBrowser;
             Name = "Modern Browser";
-            Icon = SystemIcons.Application.ToBitmap();
+            Icon = Resources.CascadiaIcon.ToBitmap();
             _pluginPath = new FileInfo(GetType().Assembly.Location).DirectoryName;
         }
         public override ViewItemManager GenerateViewItemManager()

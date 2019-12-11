@@ -122,6 +122,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CascadiaIcon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>%25SystemRoot%25\sysnative\WindowsPowerShell\v1.0\powershell.exe -NoProfile -File $(ProjectDir)Scripts\debug.ps1 "$(ProjectDir)$(OutDir)"</PostBuildEvent>

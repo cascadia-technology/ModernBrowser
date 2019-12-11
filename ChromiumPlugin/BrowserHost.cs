@@ -1,8 +1,6 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
 using System;
-using System.IO;
-using System.Text;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -78,7 +76,7 @@ namespace ModernBrowserShim
             lock (_lockObj)
             {
                 if (_browser.JavascriptObjectRepository.IsBound(jsObjectName)) return;
-                _browser.JavascriptObjectRepository.Register(jsObjectName, obj, false, new BindingOptions { CamelCaseJavascriptNames = false });
+                _browser.JavascriptObjectRepository.Register(jsObjectName, obj, true, new BindingOptions { CamelCaseJavascriptNames = false });
             }
         }
 
