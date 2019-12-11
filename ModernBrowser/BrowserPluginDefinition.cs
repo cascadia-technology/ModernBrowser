@@ -23,7 +23,7 @@ namespace ModernBrowser
         public BrowserPluginDefinition()
         {
             Id = Identifiers.PluginId;
-            Name = "Modern Browser";
+            Name = "Plugin";
             Manufacturer = "Cascadia Technology LLC";
             VersionString = GetType().Assembly.GetName().Version.ToString();
             Icon = SystemIcons.Application.ToBitmap();
