@@ -37,6 +37,14 @@ namespace ModernBrowser
             AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += ResolveCefSharpAssemblies;
             ViewItemPlugins.Add(new BrowserViewItemPlugin());
         }
+
+        public override void Close()
+        {
+            ViewItemPlugins.Clear();
+            AppDomain.CurrentDomain.AssemblyResolve -= ResolveCefSharpAssemblies;
+            AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve -= ResolveCefSharpAssemblies;
+        }
+
         private Assembly ResolveCefSharpAssemblies(object sender, ResolveEventArgs args)
         {
             if (!args.Name.StartsWith("CefSharp")) return null;
