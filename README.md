@@ -1,5 +1,11 @@
 # ModernBrowser
 
+## NOTICE
+
+**This project has not been maintained and will not be updated in the future. See the new [Web Content Plugin project](https://github.com/joshooaj/WebContentPlugin) based on the evergreen Microsoft Edge WebView2 Runtime.**
+
+## Original readme
+
 This is a MIP Plugin for Milestone XProtect Smart Client which adds a Chromium browser view item
 plugin allowing you to display just about any web content that Chrome is capable of displaying.
 
